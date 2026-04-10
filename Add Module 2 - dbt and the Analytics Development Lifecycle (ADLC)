@@ -1,0 +1,121 @@
+# Module 2: dbt and the Analytics Development Lifecycle (ADLC)
+
+## What is the ADLC?
+
+The Analytics Development Lifecycle is the end-to-end process 
+of building, deploying and maintaining data pipelines — the 
+data equivalent of DevOps in software engineering.
+
+dbt is the tool that makes the ADLC possible by bringing 
+software engineering best practices to analytics.
+
+---
+
+## The ADLC — 7 stages in an infinite loop
+
+DEVELOP → PLAN → DEPLOY → TEST → ANALYZE → DISCOVER → OBSERVE → OPERATE
+↑                                                                 │
+└─────────────────────────────────────────────────────────────────┘
+
+### Left side — Development (blue/green)
+
+| Stage | What happens | dbt tool |
+|-------|-------------|----------|
+| **DEVELOP** | Write SQL models and transformations | dbt Core / dbt Cloud IDE |
+| **PLAN** | Design data architecture and dependencies | dbt DAG (lineage graph) |
+| **DEPLOY** | Run dbt in production automatically | dbt Cloud jobs |
+| **TEST** | Validate data quality automatically | dbt tests (unique, not_null, etc.) |
+
+### Right side — Operations (yellow/green)
+
+| Stage | What happens | dbt tool |
+|-------|-------------|----------|
+| **ANALYZE** | Explore transformed data in BI tools | Power BI · Tableau · Looker |
+| **DISCOVER** | Find new insights and business questions | dbt Explorer |
+| **OBSERVE** | Monitor data quality and performance | dbt observability |
+| **OPERATE** | Keep pipelines running and maintained | dbt Cloud orchestration |
+
+---
+
+## How dbt enables the full ADLC
+
+### Before dbt
+
+Analyst writes SQL manually
+↓
+Script runs somewhere nobody knows
+↓
+Dashboard breaks, nobody knows why
+↓
+Data team spends 3 days debugging
+
+### After dbt
+
+Analyst writes SQL model in dbt
+↓
+dbt tests run automatically
+↓
+dbt deploys on schedule
+↓
+Documentation updates automatically
+↓
+Dashboard always shows clean data
+
+---
+
+## The Business Analyst role across the ADLC
+
+As a BA with dbt, you participate in every stage:
+
+| Stage | Your role as BA |
+|-------|----------------|
+| PLAN | Define what data the business needs and why |
+| DEVELOP | Write SQL models that transform raw data |
+| TEST | Validate data matches business expectations |
+| DEPLOY | Schedule automated runs in dbt Cloud |
+| ANALYZE | Build Power BI dashboards on clean data |
+| DISCOVER | Identify new optimization opportunities |
+| OBSERVE | Monitor KPIs and data freshness |
+| OPERATE | Maintain and improve existing pipelines |
+
+---
+
+## Why the ADLC matters for your career
+
+Traditional Business Analyst:
+- Receives data → analyzes → presents → done
+
+ADLC-aware Business Analyst (top 1%):
+- Owns the entire data lifecycle
+- Guarantees data quality at every stage
+- Connects business needs with technical implementation
+- Monitors and improves continuously
+
+---
+
+## Key concepts introduced in this module
+
+**DAG (Directed Acyclic Graph)**
+The visual map of how your dbt models depend on each other.
+
+source → staging → intermediate → final model
+
+**Data lineage**
+The ability to trace exactly where each number in your 
+dashboard comes from — critical for data trust.
+
+**CI/CD for data**
+Continuous Integration / Continuous Deployment applied to 
+data pipelines — dbt enables automated testing before 
+any change goes to production.
+
+---
+
+## Key takeaway
+
+The ADLC transforms Business Analysts from report builders 
+into data engineers who own the full pipeline — from raw 
+data to business decision.
+
+This is the mindset shift that separates the top 1%.
+
