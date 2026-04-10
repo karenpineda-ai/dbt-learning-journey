@@ -1,0 +1,130 @@
+# Module 1: Building Data You Can Trust with dbt
+
+## The problem dbt solves
+
+Modern companies run AI business initiatives — Agentic AI Systems, 
+chatbots, predictive modeling, data exploration — but all of these 
+need clean, reliable, well-structured data to work.
+
+## The Modern Data Stack with dbt
+
+AI Business Initiatives
+(Agentic AI · Chatbots · Multi-model · Predictive Modeling · Analytics)
+↑
+LLM & Orchestration Layer
+(Claude · ChatGPT · Gemini · RAG · Pinecone)
+↑
+dbt MCP Server
+↑
+Structured Context Layer — dbt ⭐
+(Rich context & metadata | Centrally defined semantics)
+↑
+Data & AI Platform
+(Databricks · Snowflake · BigQuery · etc.)
+↑
+Load Data
+(dltHub · Fivetran · Airbyte · etc.)
+
+## The 3 pillars of trustworthy data
+
+### 1. Transformations in pure SQL
+```sql
+SELECT
+    customer_id,
+    SUM(amount) as total_revenue,
+    COUNT(*) as total_orders
+FROM raw.orders
+WHERE status = 'completed'
+GROUP BY customer_id
+```
+
+### 2. Automatic tests
+```yaml
+models:
+  - name: orders
+    columns:
+      - name: order_id
+        tests:
+          - unique
+          - not_null
+      - name: status
+        tests:
+          - accepted_values:
+              values: ['completed', 'pending', 'cancelled']
+```
+
+### 3. Automatic documentation
+```yaml
+models:
+  - name: orders
+    description: "Clean and transformed orders table"
+    columns:
+      - name: order_id
+        description: "Unique ID for each order"
+```
+
+## dbt workflow
+
+Raw data → dbt transforms → Clean data → Power BI / analysis
+
+## dbt Data Flow — How transformations work
+
+### Source → Staging → Final Model
+
+SRC jaffle_shop.customers → MDL stg_jaffle_shop__customers ↘
+MDL dim_customers
+SRC jaffle_shop.orders    → MDL stg_jaffle_shop__orders    ↗
+
+**3 layers:**
+- **SRC (Source)** — raw data as it arrives from the database
+- **MDL Staging** — cleaned and standardized intermediate models
+- **MDL Final** — business-ready dimension tables for analysis
+
+## dbt Fusion Engine Architecture
+
+ACTIVE METADATA LAYER
+┌─────────────────────────────────────────────────────┐
+│ Data Control Plane                                   │
+│ Orchestration · Observability · Catalog · Semantics  │
+└──────────────────────┬──────────────────────────────┘
+│
+┌──────────────────────▼──────────────────────────────┐
+│ Pipeline                                             │
+│ Ingestion → [Transformation] → BI / Analytics / AI  │
+└──────────────────────┬──────────────────────────────┘
+│
+┌──────────────────────▼──────────────────────────────┐
+│ Engine — dbt Fusion Engine ⭐                        │
+└──────────────────────┬──────────────────────────────┘
+│
+┌──────────────────────▼──────────────────────────────┐
+│ Data & AI Platform                                   │
+│ Snowflake · Databricks · BigQuery · etc.             │
+└─────────────────────────────────────────────────────┘
+
+
+**Key insight:** dbt Fusion Engine sits at the center of the 
+entire pipeline — it controls the transformation layer AND 
+connects to the metadata layer that feeds BI, Analytics and AI.
+
+## Why dbt is the critical layer
+
+dbt sits at the center of the modern data stack as the 
+**structured context layer** — it connects raw data with 
+AI systems by providing:
+
+- **Rich context & metadata** — AI models understand what the data means
+- **Centrally defined semantics** — one source of truth for all teams
+- **dbt MCP Server** — direct integration with LLMs like Claude
+
+## Key insight for AI + dbt
+
+Without dbt, AI systems hallucinate because they don't 
+understand the data structure. With dbt, you give LLMs 
+the context they need to reason correctly about your data.
+
+## Key takeaway
+
+dbt guarantees data quality BEFORE building dashboards.
+This is what separates reliable analysis from guesswork.
+
