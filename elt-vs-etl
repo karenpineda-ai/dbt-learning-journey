@@ -1,0 +1,40 @@
+ELT vs ETL
+La competencia entre ETL (Extracción, Transformación y Carga) y ELT (Extracción, Carga y Transformación) es uno de los debates más importantes en la gestión de datos moderna. A medida que el volumen y la complejidad de los datos aumentan, las organizaciones deben decidir qué enfoque se adapta mejor a sus necesidades analíticas.
+
+Al comparar ETL y ELT, la principal diferencia radica en cuándo y dónde se produce la transformación de datos. En ETL, los datos se transforman antes de cargarlos, mientras que en ELT, se transforman después de cargarlos en el almacén de datos.
+
+En este artículo, exploraremos ETL frente a ELT, analizando sus diferencias, procesos y puntos fuertes para ayudarte a decidir cuál es el mejor para tu estrategia de datos.
+
+¿Qué es ETL?
+ETL significa Extracción, Transformación y Carga. Este método prepara los datos para su análisis extrayéndolos de diversas fuentes, transformándolos a un formato estructurado y cargándolos en un sistema de destino.
+
+En los flujos de trabajo ETL, la mayor parte de la transformación de datos significativa se produce fuera de esta canalización principal, en una plataforma de inteligencia empresarial (BI) posterior.
+
+ELT vs ETL
+La competencia entre ETL (Extracción, Transformación y Carga) y ELT (Extracción, Carga y Transformación) es uno de los debates más importantes en la gestión de datos moderna. A medida que el volumen y la complejidad de los datos aumentan, las organizaciones deben decidir qué enfoque se adapta mejor a sus necesidades analíticas.
+
+Al comparar ETL y ELT, la principal diferencia radica en cuándo y dónde se produce la transformación de datos. En ETL, los datos se transforman antes de cargarlos, mientras que en ELT, se transforman después de cargarlos en el almacén de datos.
+
+En este artículo, exploraremos ETL frente a ELT, analizando sus diferencias, procesos y puntos fuertes para ayudarte a decidir cuál es el mejor para tu estrategia de datos.
+
+
+
+
+¿Qué es ETL?
+ETL significa Extracción, Transformación y Carga. Este método prepara los datos para su análisis extrayéndolos de diversas fuentes, transformándolos a un formato estructurado y cargándolos en un sistema de destino.
+
+En los flujos de trabajo ETL, la mayor parte de la transformación de datos significativa se produce fuera de esta canalización principal, en una plataforma de inteligencia empresarial (BI) posterior.
+
+
+
+
+
+El proceso ETL
+Extracción : Los datos se obtienen de diversas fuentes, a menudo en formatos no estructurados o semiestructurados.
+Transformación : Los datos se someten a un proceso de transformación que incluye limpieza, formato y estructuración para su análisis.
+Carga : Una vez transformados, los datos se cargan en un sistema de destino, normalmente un almacén de datos, donde quedan disponibles para consultas y generación de informes.
+¿Qué es ELT?
+ELT significa Extraer, Cargar, Transformar y ha ganado popularidad en entornos nativos de la nube. En este enfoque, los datos se extraen y se cargan primero en un almacén de datos, lo que permite transformarlos utilizando la capacidad de procesamiento del almacén.
+
+ELT se ha consolidado como un paradigma para la gestión de flujos de información en un almacén de datos moderno. Esto representa un cambio fundamental respecto a cómo se gestionaban los datos anteriormente, cuando ETL era el flujo de trabajo de datos que implementaba la mayoría de las empresas.
+
