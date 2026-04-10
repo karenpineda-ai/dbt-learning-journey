@@ -1,0 +1,29 @@
+Hoja de referencia rápida sobre los cambios en la interfaz de usuario de dbt Studio
+¡La interfaz de usuario de dbt Studio se ha renovado! Nuestros vídeos muestran la interfaz de usuario de la plataforma dbt a partir de agosto de 2025, así que aquí tienes una guía rápida para ayudarte a entender qué ha cambiado de ubicación y qué novedades incluye.
+
+En ambas imágenes de la interfaz de usuario hay 3 círculos con colores correspondientes. Estos reflejan elementos que han cambiado de apariencia.
+
+En la imagen de la nueva interfaz de usuario aparecen dos flechas con un cuadro de texto que dice "¡Nuevo!". Esto indica elementos totalmente nuevos en dbt Studio. Continúa leyendo para obtener más información e imágenes.
+
+¿Qué cambió?
+
+Círculo rojo: El botón de aplazamiento ahora ofrece un menú desplegable más intuitivo para que puedas seleccionar exactamente a qué entorno deseas aplazar el desarrollo.
+
+Círculo verde: El indicador de estado ahora muestra con mayor claridad cuándo su proyecto dbt está conectado a su almacén de datos y cuándo presenta problemas.
+
+Círculo morado: dbt Copilot ahora tiene un botón dedicado en lugar del antiguo icono de varita mágica.
+
+¿Qué hay de nuevo?
+
+Indicador de versión de dbt en Studio. Antes, tenías que consultar la configuración de usuario para ver qué versión de dbt tenías instalada. Ahora, lo tienes al alcance de la mano.
+
+Indicador de errores y advertencias en Studio (iconos de signo de exclamación y "x"): Anteriormente, los errores y las advertencias aparecían después de ejecutar un comando dbt o se ocultaban en el registro de estado. Ahora, estos indicadores están disponibles de inmediato.
+
+Captura de pantalla de la interfaz de usuario antigua
+
+<img width="626" height="380" alt="Image" src="https://github.com/user-attachments/assets/7dd44384-31a1-4bc1-8d99-f5876853c7e5" />
+
+Captura de pantalla de la nueva interfaz de usuario
+
+
+
