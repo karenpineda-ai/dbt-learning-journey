@@ -17,6 +17,8 @@ Al comparar ETL y ELT, la principal diferencia radica en cuándo y dónde se pro
 
 En este artículo, exploraremos ETL frente a ELT, analizando sus diferencias, procesos y puntos fuertes para ayudarte a decidir cuál es el mejor para tu estrategia de datos.
 
+<img width="575" height="334" alt="Image" src="https://github.com/user-attachments/assets/99414132-2435-4457-ae40-28b349918e8d" />
+
 
 
 
@@ -25,7 +27,7 @@ ETL significa Extracción, Transformación y Carga. Este método prepara los dat
 
 En los flujos de trabajo ETL, la mayor parte de la transformación de datos significativa se produce fuera de esta canalización principal, en una plataforma de inteligencia empresarial (BI) posterior.
 
-
+<img width="560" height="256" alt="Image" src="https://github.com/user-attachments/assets/b7eacc3c-66e4-4b9c-a13d-93de20b7905c" />
 
 
 
